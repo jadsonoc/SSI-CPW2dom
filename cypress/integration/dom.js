@@ -28,8 +28,7 @@ it('Testing issue 3 with two letters', function() {
   cy.visit('http://localhost:8080/');
   cy.get('#name').clear();
   cy.get('#name').type('ri');
-  cy.get('#search > div').click();
-  cy.get('#search > div').click();
-  cy.get('#search > div').should('have.text', 'Ricardo');
+  cy.get('#search > :nth-child(1)').click();
+  cy.get('#search > :nth-child(1)').should('have.text', 'Ricardo');
 });
 
